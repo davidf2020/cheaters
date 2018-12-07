@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/davidfernandez/EE312/Cheaters/plagiarismCatcher.cpp
+plagiarismCatcher.hpp
+/Users/davidfernandez/EE312/Cheaters/plagiarismCatcher.hpp
+sys/types.h
+-
+dirent.h
+-
+errno.h
+-
+vector
+-
+string
+-
+iostream
+-
+fstream
+-
+cmath
+-
+
+/Users/davidfernandez/EE312/Cheaters/plagiarismCatcher.hpp
+stdio.h
+-
+
