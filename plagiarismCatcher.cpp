@@ -51,8 +51,9 @@ int main() {
     vector<string> nwords = vector<string>();       //vector for set of n words in a files
     string addwords;                                //string used to concatenate words to nword chunks
 
-    for (int i = 0; i < 7 /*files.size()*/; i++) {        //read in all words from each file and hash to hashTable
-        nwords.clear();                                         //clears vector for new file
+    for (int i = 0; i < files.size(); i++) {        //read in all words from each file and hash to hashTable
+        nwords.clear();
+        words.clear();                              //clears vector for new file
         cout << i << " "<< files[i] << endl;
 
         string word;
@@ -168,7 +169,7 @@ int main() {
 
     for(int i=0; i<(rcSize); i++){
         for(int j=0; j<(rcSize); j++){
-            cout << gridC[i][j] << " ";
+            cout << gridC[i][j] << "  ";
         }
         cout << endl;
     }
@@ -198,44 +199,19 @@ int getdir(string dir, vector<string> &files)
 
     int hashKey(string chunk, int HSIZE){
 
-//        long sfold(String s, int M) {
-////            int intLength = s.length() / 4;
-////            long sum = 0;
-////            for (int j = 0; j < intLength; j++) {
-////                char c[] = s.substring(j * 4, (j * 4) + 4).toCharArray();
-////                long mult = 1;
-////                for (int k = 0; k < c.length; k++) {
-////                    sum += c[k] * mult;
-////                    mult *= 256;
-////                }
-////            }
-////
-////            char c[] = s.substring(intLength * 4).toCharArray();
-////            long mult = 1;
-////            for (int k = 0; k < c.length; k++) {
-////                sum += c[k] * mult;
-////                mult *= 256;
-////            }
-////
-////            return(Math.abs(sum) % M);
-////        }
-
-
-
         int keyIndex = 0;
 
-        for (double i = 0; i < chunk.size() - 1; i++) {
-            keyIndex += chunk[i];
+        for (int i = 0; i < chunk.size() - 1; i++) {
 
-//            double index2 = chunk[chunk.size() - i - 1];
-//
-//            double nindex = index2;
-//
-//            nindex = nindex * pow(31.0, i);
-//
-//            index2 = (unsigned int) nindex;
-//
-//            keyIndex += index2;
+            double index2 = chunk[chunk.size() - i - 1];
+
+            double nindex = index2;
+
+            nindex = nindex * pow(31.0, i);
+
+            index2 = (unsigned int) nindex;
+
+            keyIndex += index2;
 
         }
 
