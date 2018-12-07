@@ -22,13 +22,20 @@ struct hashNode {
     struct hashNode *next;
 };
 
+struct outNode{
+    int collisions;
+    string file1;
+    string file2;
+};
+
 int getdir (string dir, vector<string> &files);
 int hashKey(string chunk, int HSIZE);
+bool compare(outNode i, outNode j);
 
 
 int main() {
 
-    static const int TABLESIZE = 93053;
+    static const int TABLESIZE = 1000003;
     int numWords = 6;
 
     hashNode *arr[TABLESIZE];
@@ -169,11 +176,33 @@ int main() {
 
 ///////USED TO CHECK COLLISIONS ON GRID///////
 
-    for(int i=0; i<(rcSize); i++){
-        for(int j=0; j<(rcSize); j++){
-            cout << gridC[i][j] << "  ";
+//    for(int i=0; i<(rcSize); i++){
+//        for(int j=0; j<(rcSize); j++){
+//            cout << gridC[i][j] << "  ";
+//        }
+//        cout << endl;
+//    }
+
+    vector<outNode> output;
+
+
+    for(int i = 0; i < rcSize; i++){
+        for(int j = 0; j < rcSize; j++){
+            if(gridC[i][j] > 100){
+                outNode newOut;
+                newOut.collisions = gridC[i][j];
+                newOut.file1 = files[i];
+                newOut.file2 = files[j];
+
+                output.push_back(newOut);
+            }
         }
-        cout << endl;
+    }
+
+    sort(output.begin(), output.end(), compare);
+
+    for(vector<outNode>::iterator iter = output.begin(); iter != output.end(); iter++){
+        cout<< iter->collisions << " " << iter->file1 << " " << iter->file2 << endl;
     }
 
 
@@ -222,3 +251,11 @@ int getdir(string dir, vector<string> &files)
         return keyIndex;
 
     }
+
+bool compare(outNode i, outNode j){
+    if(i.collisions>j.collisions){
+        return true;
+    }else{
+        return false;
+    }
+}
