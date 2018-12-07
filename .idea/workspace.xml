@@ -13,6 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="847d3788-1919-44a0-993e-d423c03ff89a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Cheaters.dir/plagiarismCatcher.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Cheaters.dir/plagiarismCatcher.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Cheaters" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Cheaters" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plagiarismCatcher.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/plagiarismCatcher.cpp" afterDir="false" />
     </list>
@@ -48,13 +49,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="2883" />
+          <entry key="cpp" value="3889" />
+          <entry key="txt" value="86" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Doxygen file" value="2" />
-          <entry key="ObjectiveC" value="2881" />
+          <entry key="Doxygen file" value="3" />
+          <entry key="ObjectiveC" value="3886" />
+          <entry key="PLAIN_TEXT" value="86" />
         </counts>
       </usages-collector>
     </session>
@@ -69,8 +72,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plagiarismCatcher.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
+            <state relative-caret-position="-2754">
+              <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
               <folding>
                 <element signature="e#84#116#0" expanded="true" />
               </folding>
@@ -96,9 +99,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="840" />
     <option name="y" value="23" />
-    <option name="width" value="601" />
+    <option name="width" value="840" />
     <option name="height" value="978" />
   </component>
   <component name="ProjectView">
@@ -168,29 +172,37 @@
       <workItem from="1544165198037" duration="9985000" />
       <workItem from="1544193569842" duration="566000" />
       <workItem from="1544194205616" duration="36000" />
-      <workItem from="1544197575192" duration="761000" />
+      <workItem from="1544197575192" duration="3402000" />
     </task>
+    <task id="LOCAL-00001" summary="Output is correct now, just need command line arguments fed in">
+      <created>1544202790130</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544202790133</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16701000" />
+    <option name="totallyTimeSpent" value="19342000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="840" y="23" width="840" height="978" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10622711" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21804512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.29795918" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3295711" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989796" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.327551" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.32731378" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -207,17 +219,21 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Output is correct now, just need command line arguments fed in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Output is correct now, just need command line arguments fed in" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/plagiarismCatcher.cpp</url>
-          <line>200</line>
+          <line>231</line>
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/plagiarismCatcher.cpp</url>
-          <line>120</line>
+          <line>129</line>
           <option name="timeStamp" value="33" />
         </line-breakpoint>
       </breakpoints>
@@ -232,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plagiarismCatcher.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="91" column="83" selection-start-line="91" selection-start-column="83" selection-end-line="91" selection-end-column="83" />
+        <state relative-caret-position="-2754">
+          <caret line="49" column="2" selection-start-line="49" selection-start-column="2" selection-end-line="49" selection-end-column="2" />
           <folding>
             <element signature="e#84#116#0" expanded="true" />
           </folding>

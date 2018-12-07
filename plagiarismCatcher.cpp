@@ -33,10 +33,11 @@ int hashKey(string chunk, int HSIZE);
 bool compare(outNode i, outNode j);
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
     static const int TABLESIZE = 1000003;
     int numWords = 6;
+//    int numWords = argv[3];
 
     hashNode *arr[TABLESIZE];
 
@@ -46,6 +47,7 @@ int main() {
 
     //////READ IN FILES AND HASH///////////
 
+//    char dir = argv []
     string dir = string("sm_doc_set");          //name directory to with files to hash
     vector<string> files = vector<string>();    //create vector for files to hash
 
