@@ -89,7 +89,7 @@ int main() {
                     nwords[j][k] = nwords[j][k] + 0x20;
                 }
 
-                if (!(nwords[j][k] >= 0x61 && nwords[j][k] <= 0x7A)) {
+                if (!((nwords[j][k] >= 0x61 && nwords[j][k] <= 0x7A) || (nwords[j][k] >=0x30 && nwords[j][k] <= 0x39))) {
                     nwords[j].erase(k--, 1);
                     length = nwords[j].size();
                 }
@@ -97,9 +97,11 @@ int main() {
         }
 
         for (int j = 0; j < nwords.size(); j++) {         //prints nword chunks to console
-//            cout << nwords[j] << endl;
+            cout << nwords[j] << "  ";
 
             int keyIndex = hashKey(nwords[j], TABLESIZE);
+
+            cout << keyIndex << endl;
 
             if(arr[keyIndex] == NULL){
                 hashNode *temp = new hashNode;
@@ -199,7 +201,7 @@ int getdir(string dir, vector<string> &files)
 
     int hashKey(string chunk, int HSIZE){
 
-        int keyIndex = 0;
+       unsigned int keyIndex = 0;
 
         for (int i = 0; i < chunk.size() - 1; i++) {
 
